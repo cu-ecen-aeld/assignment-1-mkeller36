@@ -12,7 +12,7 @@ else
         echo "Directory not found"
         exit 1 
     else 
-        files=$( grep -rc $searchstr* $filesdir | wc -l )
+        files=$( grep -rl $searchstr* $filesdir | wc -l )
         lines=$( grep -rc $searchstr* $filesdir | wc -l )
         printf "The number of files are %d and the number of matching lines are %d" $files $lines
         exit 0
