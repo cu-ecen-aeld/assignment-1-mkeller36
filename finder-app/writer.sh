@@ -1,10 +1,13 @@
 #!/bin/bash
 writestr=$2
-file="."
-file+=$1
-if [ -z $writefile ] || [ -z $writestr ]
+file=$1
+
+echo $file
+echo $writestr
+
+if [ -z $file ] || [ -z $writestr ]
 then 
-    echo "Arguments not specified"
+    echo "writer: Arguments not specified"
     exit 1
 else 
     mkdir -p "${file%/*}" && touch "$file"

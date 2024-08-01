@@ -4,7 +4,7 @@ searchstr=$2
 
 if [ -z $filesdir ] || [ -z $searchstr ]
 then 
-    echo "Arguments not specified"
+    echo "finder: Arguments not specified"
     exit 1
 else 
     if [ ! -d $filesdir ] 
